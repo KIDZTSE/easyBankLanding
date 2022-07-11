@@ -1,0 +1,366 @@
+@font-face {
+    font-family: 'Public Sans', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap');
+}
+
+:root {
+    --primary-dk-blue: hsl(233, 26%, 24%);
+    --primary-green: hsl(136, 65%, 51%);
+    --primary-cyan: hsl(192, 70%, 51%);
+    --neutral-blue: hsl(233, 8%, 62%);
+    --neutral-lt-blue: hsl(220, 16%, 96%);
+    --neutral-lt-grey: hsl(0, 0%, 98%);
+    --neutral-white: hsl(0, 0%, 100%);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Public Sans', sans-serif;
+    font-size: 18px;
+    color: var(--neutral-blue);
+    overflow-x: hidden;
+    text-align: center;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.imgContainer {
+    width: 100%;
+}
+
+img {
+    width: 100%;
+}
+
+.dskHidden {
+    position: absolute;
+    right: .5em;
+}
+
+.fermer-btn {
+    visibility: hidden;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container {
+    width: 100%;
+}
+
+.mobileHeaderbar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 3em;
+    background-color: var(--neutral-white);
+    padding: .5em;
+    position: sticky;
+    z-index: 10;
+}
+
+nav {
+    text-align: center;
+    width: 100%;
+    margin: 2em;
+    border: var(--neutral-white) 1px solid;
+    background-color: var(--neutral-white);
+    border-radius: 10px;
+    box-shadow: .5em .5em 3em var(--primary-dk-blue);
+    padding: 0;
+    width: 100%;
+    visibility: hidden;
+    display: none;
+    z-index: 10;
+}
+
+.headnavbar--visible {
+    visibility: visible;
+    display: block;
+    position: absolute;
+    left: -3em;
+    top: 2em;
+    width: 80%;
+    margin: 2em 4.5em;
+}
+
+.toggle-btn {
+    background-color: transparent;
+    border: transparent;
+}
+
+nav ul {
+    margin: 1em auto;
+    padding: 0;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+li+li {
+    margin-top: .3em;
+}
+
+.mblHidden {
+    visibility: hidden;
+}
+
+.title {
+    color: var(--primary-dk-blue);
+    font-weight: 200;
+}
+
+.btn {
+    background: linear-gradient(to right, var(--primary-green), var(--primary-cyan));
+    padding: 1em 2em;
+    border-radius: 2em;
+    color: var(--neutral-white);
+    font-weight: 400;
+    font-size: .7em;
+}
+
+.hero {
+    background-image: url('/images/bg-intro-mobile.svg');
+    background-repeat: no-repeat;
+    margin-top: -40%;
+    background-color: var(--neutral-white);
+    margin-bottom: 4em;
+}
+
+.flexContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.textContainer {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.textHero{
+    width: 90%;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 1.5em;
+}
+
+p {
+    font-size: .7em;
+    line-height: 1.5em;
+    margin-bottom: 2em;
+}
+
+.ancor {
+    background-color: var(--neutral-lt-blue);
+    padding-bottom: 2em;
+}
+
+.explain {
+    margin-top: 0;
+}
+
+.icContainer {
+    width: 20%;
+    margin: 0 auto;
+}
+
+.articles {
+    padding: 3em auto;
+    padding-bottom: 3em;
+    background-color: var(--neutral-lt-grey);
+}
+
+.articles h3 {
+    margin-top: 3em;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin: 1em;
+    background-color: var(--neutral-white);
+    border-radius: 5px;
+    padding-bottom: 1em;
+}
+
+.cardCover {
+    border-radius: 5px 5px 0 0;
+}
+
+.articleAuthor,
+.articleTitle,
+.articleContent {
+    margin: .5em .2em;
+}
+
+footer {
+    background-color: var(--primary-dk-blue);
+    padding-bottom: .1em;
+}
+
+.footerLogo {
+    width: 50%;
+    margin: 2em auto;
+
+}
+
+.socialMediaLogos {
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+
+.socialMedia {
+    margin: .5em;
+}
+
+.footerLink a {
+    color: var(--neutral-white);
+    display: block;
+    font-size: .8em;
+    margin: .7em;
+    font-weight: 200;
+}
+
+.footerLink .btn {
+    margin: 2em auto;
+    width: 60%;
+}
+
+@media screen and (min-width:40rem) {
+    body {
+        font-size: 18px;
+        margin: 0;
+        padding:0;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+    h2{
+        font-size: 1.8em;
+    }
+    h3{
+        font-size: 1.5em;
+    }
+    p{
+        font-size: 1em;
+    }
+
+    .mblHidden {
+        visibility: visible;
+    }
+
+    .dskHidden {
+        visibility: hidden;
+    }
+
+    header {
+
+        background-color: var(--neutral-white);
+        position: sticky;
+        width: 100%;
+        z-index: 999;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .mobileHeaderbar {
+        display: flex;
+        align-items: center;
+        padding: 0;
+        width: 25%;
+    }
+
+    div.logo {
+        height: 20px;
+        
+    }
+
+    nav {
+        visibility: visible;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+        margin-top: 0;
+    }
+
+    nav ul {
+        display: flex;
+        margin: 0 auto;
+    }
+
+    nav ul li a {
+        margin: 0 1em;
+    }
+
+    li+li {
+        margin-top: 0;
+    }
+
+    .imgHero {
+        width: 50%;
+        max-width: 630px;
+        position: absolute;
+        top: -2em;
+        right: -4em;
+    }
+
+    .hero {
+        margin: -3em auto;
+        display: flex;
+        flex-direction: row-reverse;
+        position: relative;
+        background-image: none;
+        height: 60vh;
+        width: 100%;
+    }
+
+    .herobg {
+        background-image: url('/images/bg-intro-desktop.svg');
+        background-repeat: no-repeat;
+        background-size:cover;
+        background-position: left ;
+        width: 60%;
+    }
+
+    .txtHero {
+        display: inline-block;
+        padding-left:8em;
+        align-self: center;
+        width: 50%;
+        text-align: left;
+    }
+   
+    .ancor{
+        padding-top: 6em;
+        text-align: left;
+    }
+}
